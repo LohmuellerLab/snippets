@@ -31,3 +31,7 @@ echo "https://drive.google.com/drive/u/1/folders/${folderid}"
 #since it's a direct pipe to the upload
 wget -qO - "ftp://ftp.ncbi.nlm.nih.gov/README.ftp" | \
   ./gdrive upload /dev/stdin -p ${folderid} --name "README.ftp"
+
+#note that you can't upload directly to team drive folders, so you'll have to manually transfer
+#files from your personal gdrive to a team drive. that process should be super quick though
+#since you're not actually copying over any new files
